@@ -11,7 +11,8 @@ body{
 
 footer {
     margin:3%;
-    font-size: .75rem;
+    font-size: 1.5vw;
+    text-align: center;
   }
 
 :root {
@@ -38,7 +39,7 @@ footer {
 .nav-menu{
     display:flex;
     padding-top: .5%;
-    font-size: 16px;
+    font-size: 1rem;
   }
   
 .nav-menu a{
@@ -58,11 +59,27 @@ footer {
     padding-left:5px;
   }
 
+  .hero-img{
+    position: relative;
+  }
+
+  .text-block-hero{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background-color: var(--lightBlue);
+    color: var(--darkGrey);
+    padding:.3%;
+    font-size: 2vm;
+    font-weight: 900;
+  }
+
 .hero-img img {
-    display:flex;
+    /*display:flex;*/
     object-fit: cover;
     width: 100%;
-    height: 20vw;
+    height: 15vw;
+    
   }
 .side-topic {
     display:flex;
@@ -78,14 +95,14 @@ footer {
     display:flex;
     flex-wrap: wrap;
     flex:1;
-    font-size:2.5vw;
+    font-size:2vw;
     flex-basis:20%;
     justify-content: flex-end;
   }
   
 .content {
     color: var(--darkGrey);
-    display:flex;
+    /*display:flex;*/
     flex:1;
     flex-basis:80%;
     margin-right: 2%;
@@ -95,16 +112,17 @@ footer {
   }
   
 .content-text p {
-    display: flex;
+   /* display: flex;*/
     margin-bottom: 1%;
   }
   
 .cont-img{
     width:100%;
   }
-  
+
 .img-row {
     display:flex;
+    justify-content: stretch;
   }
   
 .img-col {
@@ -117,29 +135,32 @@ footer {
 
 .img-col:hover {
     opacity:1;
+    cursor: pointer;
   }
+
+  .responsive-img {
+    display: flex;
+    height: auto;
+   max-width: 100%;
+}
+
   
 .text-block {
     position: absolute;
     bottom: 10%;
     left: 0%;
-    background-color: black;
-    color: white;
+    background-color: var(--lightBlue);
+    color: var(--darkGrey);
     padding:1%;
   }
 
-.responsive-img {
-      display: flex;
-      height: auto;
-      max-width: 100%;
-  }
-
 .text-blk-content {
-    font-size: 10px;
+    font-size: .8vw;
   }
 
 .text-blk-title {
-  font-size: 12px;
+  font-weight: 900;
+  font-size: 1.2vw;
 }
 
 .nav-contact-me {
@@ -161,9 +182,13 @@ footer {
 
 
 /* Media Queries*/
-@media (max-width:605px){ /*668*/
+@media (max-width:680px){ /*605*/
 body{
     background-color:whitesmoke;
+  }
+
+  footer {
+    font-size: 2vw;
   }
 
 .nav-link {
@@ -218,6 +243,11 @@ body{
 .contact-link{
     font-size: 12px;
   }
+
+  .text-block-hero{
+    width:150px;
+    font-size: 2.2vw;
+  }
 }
 
 /* Media Queries*/
@@ -226,17 +256,25 @@ body{
       background-color: pink;
     }
     
+    footer {
+      font-size: 3vw;
+    }
     /*reducing font from 20 to 10px*/
   .nav-logo{
       font-size: 18px;
     }
 
   .text-blk-content {
-      font-size: 3vw;
+      font-size: 2.5vw;
     }
 
   .text-blk-title {
-    font-size: 3.5vw;
+    font-size: 3vw;
+    }
+
+    /*removed hero text not sutiable for lower rest device*/
+    .text-block-hero{
+      z-index: -1;
     }
   }
 
@@ -245,14 +283,14 @@ body{
       background-color: lightskyblue;
     }
 
-    .nav-menu{
-      font-size: 12px;
-    }
-    .text-blk-content {
+    footer {
       font-size: 4vw;
     }
-  
-  .text-blk-title {
-    font-size: 4.5vw;
-  }
+
+    .nav-menu{
+      font-size: .6rem;
+    }
+    .img-col{
+      height: 90px;
+    }
   }
