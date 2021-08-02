@@ -136,6 +136,7 @@ footer {
 .img-col:hover {
     opacity:1;
     cursor: pointer;
+    transition-duration: 1s;
   }
 
   .responsive-img {
@@ -284,4 +285,8 @@ body{
     .img-col{
       height: 90px;
     }
+  }
+
+  .mainImg{
+    height: 250px;
   }
